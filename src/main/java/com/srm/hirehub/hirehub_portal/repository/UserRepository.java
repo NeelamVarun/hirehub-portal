@@ -10,10 +10,10 @@ import com.srm.hirehub.hirehub_portal.entity.UserEntity;
 public interface UserRepository extends JpaRepository<UserEntity,Long> {
 	
 	
-	@Query(value = "select * from user where email= :email and password=:password", nativeQuery = true)
+	@Query(value = "select * from user_entity where email= :email and password=:password", nativeQuery = true)
 	public UserEntity getUserByMailAndPassword(String email, String password);
 	
-	@Query(value = "select * from user where email = :email",nativeQuery = true)
+	@Query(value = "select * from user_entity where email = :email",nativeQuery = true)
 	public UserEntity getUserByEmail(String email);
 
 }
